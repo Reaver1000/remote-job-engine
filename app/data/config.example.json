@@ -1,0 +1,33 @@
+{
+  "_README": "Copy this to app/data/config.json and fill in your details. This is used by the dashboard for scoring, CV tailoring, and auto-apply form filling.",
+
+  "name": "Your Full Name",
+  "email": "you@example.com",
+  "phone": "+44 7700 000000",
+  "location": "Your City, Country",
+  "country": "Your Country",
+  "linkedin_url": "https://www.linkedin.com/in/your-profile/",
+  "github_url": "https://github.com/your-handle",
+  "portfolio_url": "https://yourportfolio.com",
+  "notice_period": "Immediately available",
+  "salary_expectation_monthly_eur": "3000",
+
+  "role_keywords": [
+    "data analyst", "data analytics", "bi analyst", "business intelligence",
+    "reporting analyst", "business analyst", "operations analyst",
+    "analytics engineer", "data scientist",
+    "junior developer", "software engineer", "python developer",
+    "technical support", "customer support", "virtual assistant"
+  ],
+
+  "exclude_titles": ["manager", "head of", "director", "vp ", "vice president", "chief"],
+
+  "phone_block": [
+    "call center", "call centre", "outbound call", "cold call", "phone sales"
+  ],
+
+  "acceptable_locations": [],
+  "block_locations": [],
+
+  "summary": "One sentence about who you are and what you're looking for. Used in LLM scoring prompts."
+}

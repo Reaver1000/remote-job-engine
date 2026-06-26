@@ -1,0 +1,61 @@
+{
+  "_README": "Copy to config.json (skill root) and edit. Generated during onboarding (Prompt A). Location filtering is OFF by default (acceptable_locations empty = no region restriction); add entries only to restrict.",
+  "role_keywords": [
+    "data analyst",
+    "data analytics",
+    "bi analyst",
+    "business intelligence",
+    "reporting analyst",
+    "insights analyst",
+    "business analyst",
+    "analytics engineer",
+    "data scientist",
+    "data quality",
+    "data ops",
+    "ai data",
+    "annotation",
+    "model evaluation",
+    "prompt engineer",
+    "trust and safety",
+    "technical support",
+    "virtual assistant",
+    "executive assistant",
+    "administrative assistant",
+    "admin assistant",
+    "data entry",
+    "operations assistant",
+    "back office",
+    "remote assistant"
+  ],
+  "exclude_titles": [
+    "senior",
+    "sr.",
+    "staff",
+    "principal",
+    "lead ",
+    "manager",
+    "head of",
+    "director",
+    "vp ",
+    "vice president",
+    "architect"
+  ],
+  "acceptable_locations": [],
+  "block_locations": [],
+  "phone_block": [
+    "call center",
+    "call centre",
+    "outbound call",
+    "cold call",
+    "phone sales"
+  ],
+  "adzuna_country": "gb",
+  "use": {
+    "arbeitnow": true,
+    "remoteok": true,
+    "remotive": true
+  },
+  "greenhouse_boards": [],
+  "lever_boards": [],
+  "ashby_boards": []
+}

@@ -1,0 +1,6 @@
+jobhunt.db
+data/config.json
+data/base_cv.md
+jobs/
+__pycache__/
+*.pyc

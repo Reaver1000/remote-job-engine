@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+markdown>=3.5
+# Auto-apply + CV PDF generation (run: playwright install chromium)
+playwright>=1.44
+anthropic>=0.40
+# optional — OpenAI fallback (set OPENAI_API_KEY + JOBHUNT_LLM=openai):
+# openai>=1.40

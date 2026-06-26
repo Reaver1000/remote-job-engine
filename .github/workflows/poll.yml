@@ -1,0 +1,53 @@
+# Scheduled job discovery for the remote-job-hunt repo.
+# Runs poll_jobs.py on a cron (GitHub has full internet, unlike a sandbox), commits the
+# deduped state back so it only ever surfaces NEW postings, and (optionally) pings Slack.
+#
+# Setup:
+#   1. Put the skill contents at the repo root (SKILL.md, scripts/, config.json, ...).
+#   2. (Optional) Add repo secrets: ADZUNA_APP_ID, ADZUNA_APP_KEY, SLACK_WEBHOOK_URL.
+#   3. Commit this file to .github/workflows/poll.yml.
+# Caveats: GitHub may delay/coalesce scheduled runs and disables schedules after ~60 days
+# of repo inactivity; effective minimum granularity is ~5 min.
+name: poll-jobs
+on:
+  schedule:
+    - cron: "*/15 * * * *"      # every ~15 minutes
+  workflow_dispatch: {}          # manual "Run workflow" button
+permissions:
+  contents: write                # allow committing updated state back
+concurrency:
+  group: poll-jobs
+  cancel-in-progress: false
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run poller
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python scripts/poll_jobs.py
+      - name: Commit new matches + dedupe state
+        run: |
+          git config user.name "job-poller"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/seen_ids.json state/new_matches.csv 2>/dev/null || true
+          git diff --staged --quiet || (git commit -m "jobs: $(date -u +%FT%TZ)" && git push)
+      - name: Upload new matches artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: new-matches
+          path: state/new_matches.csv
+          if-no-files-found: ignore
+      - name: Notify Slack (optional)
+        if: ${{ secrets.SLACK_WEBHOOK_URL != '' }}
+        run: |
+          N=$(tail -n +2 state/new_matches.csv 2>/dev/null | wc -l | tr -d ' ')
+          curl -s -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\":briefcase: Job poller ran — ${N} total matches logged. See state/new_matches.csv\"}" \
+            "${{ secrets.SLACK_WEBHOOK_URL }}" || true

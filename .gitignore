@@ -1,0 +1,30 @@
+# personal data — never commit
+profile/config.json
+profile/base_cv.md
+skill/config.json
+skill/state/
+app/data/config.json
+app/data/base_cv.md
+app/state/
+app/jobs/
+
+# generated CV / cover letter outputs
+app/david_buchan_*.pdf
+app/david_buchan_*.md
+app/david_a_buchan_*.pdf
+
+# runtime / logs
+*.db
+*.db-journal
+*.log
+app/ERROR
+app/uvicorn.log
+app/profile/
+__pycache__/
+*.pyc
+.env
+profile/base_cv.pdf
+profile/base_cv.md
+app/profile
+app/{j*
+app/{j*

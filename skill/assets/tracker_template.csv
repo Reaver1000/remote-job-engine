@@ -1,0 +1,2 @@
+date_found,source,company,role_title,location_policy,location_eligible,comp_range,seniority,phone_load,async_friendly,fit_score,fit_tier,job_url,module_path,status,cv_tailored,cover_letter_done,date_applied,follow_up_date,notes
+2026-06-25,example-board,Example Inc,Junior Data Analyst,remote,yes,"45-55k",junior,none,yes,82,strong,https://example.com/job/123,jobs/2026-06-25_ExampleInc_junior-data-analyst_123,ready_to_submit,yes,yes,,,"Async team; confirm eligibility"

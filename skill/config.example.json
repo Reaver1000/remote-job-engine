@@ -1,0 +1,49 @@
+{
+  "_README": "Copy this to skill/config.json and fill in your details. acceptable_locations empty = no region filter (worldwide).",
+
+  "role_keywords": [
+    "data analyst", "data analytics", "bi analyst", "business intelligence",
+    "reporting analyst", "insights analyst", "business analyst", "operations analyst",
+    "analytics engineer", "data scientist", "data quality",
+    "junior developer", "software developer", "software engineer",
+    "python developer", "technical support", "support engineer",
+    "customer support", "virtual assistant", "executive assistant",
+    "administrative assistant", "data entry", "operations assistant"
+  ],
+
+  "exclude_titles": ["manager", "head of", "director", "vp ", "vice president", "chief"],
+
+  "acceptable_locations": [],
+  "block_locations": [],
+
+  "phone_block": [
+    "call center", "call centre", "outbound call", "cold call", "phone sales", "dialer"
+  ],
+
+  "_language_blocks": "Add keywords for languages you don't speak to avoid irrelevant postings",
+  "language_blocks": [],
+
+  "adzuna_country": "gb",
+
+  "use": {
+    "arbeitnow": true,
+    "remoteok": true,
+    "remotive": true
+  },
+
+  "_boards_note": "Add company ATS board slugs below. Find Greenhouse slug at boards.greenhouse.io/SLUG, Lever at jobs.lever.co/SLUG, Ashby at jobs.ashbyhq.com/SLUG",
+  "greenhouse_boards": [
+    "remotecom"
+  ],
+  "lever_boards": [
+    "jobgether"
+  ],
+  "ashby_boards": [
+    "deel",
+    "n8n",
+    "the-global-talent-co",
+    "zapier",
+    "helpscout",
+    "testgorilla"
+  ]
+}
