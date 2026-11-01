@@ -48,3 +48,14 @@ logs to `app/state/autoapply_log.csv`. **Premium roles are always review-before-
 
 See `skill/references/runbook.md` and `app/README.md` for detail. `SHORTLIST.md` has a starter
 set of real openings (as of 2026-06-25).
+
+---
+
+## Author
+
+**David Buchan** — Junior AI Engineer & Data Analyst
+- Fully remote worldwide · Erfurt, Germany (UK citizen)
+- Skills: Python, SQL, ETL, LLM APIs, n8n, automation engineering, QA automation, test automation
+- Portfolio: https://reaver1000.github.io
+- LinkedIn: https://www.linkedin.com/in/david-a-buchan/
+- Hugging Face: https://huggingface.co/Reaver1000
