@@ -28,3 +28,16 @@ profile/base_cv.md
 app/profile
 app/{j*
 app/{j*
+
+# pipeline runtime state and generated snapshots
+pipeline/applied.json
+pipeline/rejected.json
+pipeline/closed_roles.json
+pipeline/logs/
+pipeline/applications/
+pipeline/*_jobs.md
+pipeline/*_jobs.json
+pipeline/broad_shortlist.md
+pipeline/jobs_found.md
+pipeline/jobs_eliminated.md
+pipeline/rank_out.txt

@@ -6,6 +6,8 @@ remote roles fast (free), scores each for fit **and automatability + pay**, rout
 CV per posting, and applies — auto for Stack, review-first for Premium.
 
 ## Parts
+- **pipeline/** — the daily sweep engine: 14 scheduled steps across job boards, aggregators and
+  ATS feeds, plus the ATS plugin layer. See `pipeline/README.md`.
 - **skill/** — the discovery engine + prompts (the `remote-job-hunt` Claude skill). The poller
   (`skill/scripts/poll_jobs.py`) polls company ATS feeds (Greenhouse/Lever/Ashby) and aggregator
   APIs, dedupes, and writes `skill/state/new_matches.csv`. Zero LLM tokens.
