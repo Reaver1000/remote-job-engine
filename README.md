@@ -5,6 +5,12 @@ remote roles fast (free), scores each for fit **and automatability + pay**, rout
 **Stack** (automate & run several) vs **Premium** (one well-paid role, done manually), tailors a
 CV per posting, and applies — auto for Stack, review-first for Premium.
 
+## v1.1.0 — ATS plugin layer
+
+Eight provider plugins over 438 boards, a worldwide scan that returns roughly 14,000 roles in 24
+seconds, and a 14 step daily runner. The local OpenPostings dependency is retired. Full detail in
+`CHANGELOG.md`.
+
 ## Parts
 - **pipeline/** — the daily sweep engine: 14 scheduled steps across job boards, aggregators and
   ATS feeds, plus the ATS plugin layer. See `pipeline/README.md`.
